@@ -2,6 +2,9 @@
   "name": "angular-scrape",
   "version": "1.0.0",
   "main": "server.js",
+  "engines": {
+    "node": "6.9.1"
+  },
   "scripts": {
     "start": "node server.js"
   },
