@@ -1,10 +1,9 @@
 {
-  "name": "AngularJS-Homework",
+  "name": "angular-scrape",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,5 +14,15 @@
     "mongodb": "^2.2.24",
     "mongoose": "^4.8.5",
     "request": "^2.79.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leon-do/angular-scraper-scientific-american.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leon-do/angular-scraper-scientific-american/issues"
+  },
+  "homepage": "https://github.com/leon-do/angular-scraper-scientific-american#readme",
+  "description": ""
 }
