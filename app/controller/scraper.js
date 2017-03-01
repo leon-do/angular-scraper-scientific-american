@@ -1,15 +1,13 @@
 // this scrapes scientific american
 var request = require('request');
 var cheerio = require('cheerio')
-var express = require('express')
-var app = express()
 
 
-//send to routes.js
+//used in routes.js
 module.exports = {
 
     // this scrapes scientifc american and puts object into an array
-    sciMerica: function(){
+    sciMerica: function(callback){
 
         request('https://www.scientificamerican.com/video/', function (error, response, html){
                 //jqueryifiy
@@ -27,7 +25,10 @@ module.exports = {
                 })
 
                 // videoArray = [{title: sometitle, link: link2sometitle}, {title: sometitle2, link:link2somteitle2}...}
-                console.log(videoArray)
+                //console.log(videoArray)
+
+                callback(videoArray);
+
         })//request
 
     }//sciMerica

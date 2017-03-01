@@ -1,18 +1,13 @@
 var express = require('express');
-var scraper = require('./app/controller/scraper.js')
-var routes = require('./app/routes/routes.js')
 var app = express();
-var port = 3000;
+var routes = require('./app/routes/routes.js')
 
-app.get('/api', function(response, request){
-    response.send('sdfsdf')
-})
 
 app.use(express.static(__dirname + "/app"));
 
+//use routes in routes.js
+app.use('/', routes);
 
 
-app.listen(port, function() {
-    console.log("listening on port:" + port);
-});
+app.listen(process.env.PORT || 3000);
 

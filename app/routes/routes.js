@@ -1,13 +1,13 @@
 var express = require('express')
-var app = express()
+var router = express.Router();
 var scraper = require('../controller/scraper.js') //get video info from scraper.js 
 
 
-//calls the function from scraper.js (returns the array)
-scraper.sciMerica()
-
-exports.routes = function(){
-    app.get('/api', function(request, response){
-        response.send('sdfs')
+//calls the function from scraper.js. & puts the array on the interweb
+router.get('/scraper', function(request, response){
+    scraper.sciMerica(function(videoArray){
+        response.send(videoArray)
     })
-}
+})
+
+module.exports = router;
