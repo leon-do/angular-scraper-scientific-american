@@ -3,7 +3,7 @@ var request = require('request');
 var cheerio = require('cheerio')
 
 
-//used in routes.js
+//BACK: send to routes.js
 module.exports = {
 
     // this scrapes scientifc american and puts object into an array

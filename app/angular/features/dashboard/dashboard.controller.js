@@ -4,7 +4,12 @@ angular
 
 
 //brain of our view happens before view is set up
-function DashboardCtrl($scope){
+function DashboardCtrl($http){
     var vm = this;
-    vm.foo = 'bar'
+
+    //api call
+    $http.get('/scraper').then(function(response){
+        // videoArray = [{title: sometitle, link: link2sometitle}, {title: sometitle2, link:link2somteitle2}...}
+        vm.videoArray = response.data
+    })
 }

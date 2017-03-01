@@ -1,1 +1,16 @@
-<h1> {{DashboardVM.foo}} </h1>  
+<table>
+    <tr>
+        <th> Title </th>
+        <th> Link </th>
+    </tr>
+    <tr ng-repeat='row in DashboardVM.videoArray'>
+        <td> 
+            {{row.title}}
+        </td>
+        <td> 
+            <a href={{row.link}} target='_blank'> 
+                {{row.link}}
+            </a> 
+        </td>
+    </tr>
+</table>
