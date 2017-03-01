@@ -11,6 +11,6 @@ function dashboardConfig($stateProvider){
         url: '/',
         templateUrl: '/angular/features/dashboard/dashboard.html', //link
         controller: 'DashboardCtrl', //capital D end in Ctrl
-        contollerAs: 'DashboardVM' // capital D end in VM (view model)
+        controllerAs: 'DashboardVM' // capital D end in VM (view model)
     });
 }

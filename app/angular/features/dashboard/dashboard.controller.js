@@ -4,6 +4,7 @@ angular
 
 
 //brain of our view happens before view is set up
-function DashboardCtrl(){
-
+function DashboardCtrl($scope){
+    var vm = this;
+    vm.foo = 'bar'
 }
