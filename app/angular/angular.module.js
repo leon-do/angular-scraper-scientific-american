@@ -9,10 +9,10 @@ angular is global
 
 angular
     .module("angular", ['ui.router', 'angular.dashboard'])
-    .config(createAHeroConfig)
+    .config(angularConfig)
 
 
-function createAHeroConfig($urlRouterProvider){
+function angularConfig($urlRouterProvider){
     $urlRouterProvider.otherwise('/') //go here if route does not exist
  
 }
